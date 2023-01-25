@@ -1,0 +1,28 @@
+<table class="table table-dark table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre Producto</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Imagen</th>
+      <th scope="col" class="text-end">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each listaproductos}}
+    <tr>
+      <td scope="row">{{this.dataValues.idproductos}}</td>
+      <td>{{this.dataValues.nombreProducto}}</td>
+      <td>{{this.dataValues.precioProducto}}</td>
+      <td>{{this.dataValues.cantidad}}</td>
+      <td>{{this.dataValues.estado}}</td>
+      <td>{{this.dataValues.imagen}}</td>
+      <td class="text-end">
+        <a href="#" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i>View</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
